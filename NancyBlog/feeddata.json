@@ -11,34 +11,34 @@
         "feedurl": "http://philliphaydon.com/feed.xml",
         "author": "Phillip Haydon",
         "authoremail": "phillip.haydon@gmail.com",
-        "gravatarurl": ""
+        "gravatarurl": "https://s.gravatar.com/avatar/ff94721f530a7cfd1bfa19b7e6e8af8f?s=128"
     },
     {
         "id": "stevenrobbins",
         "feedurl": "http://feeds.feedburner.com/GrumpyDev?format=xml",
         "author": "Steven Robbins",
         "authoremail": "steve@robbins.me.uk",
-        "gravatarurl": ""
+        "gravatarurl": "https://s.gravatar.com/avatar/9922474b79fc3b5e52c7cd8bdff59e26?s=128"
     },
     {
         "id": "andreashåkansson",
         "feedurl": "http://thecodejunkie.com/rss.xml",
         "author": "Andreas Håkansson",
         "authoremail": "andreas@selfinflicted.org",
-        "gravatarurl": ""
+        "gravatarurl": "https://s.gravatar.com/avatar/0bf4194335195c9225f8f22e4e70b192?s=128"
     },
     {
         "id": "kristianhellang",
         "feedurl": "http://kristian.hellang.com/rss/",
         "author": "Kristian Hellang",
         "authoremail": "kristian@hellang.com",
-        "gravatarurl": ""
+        "gravatarurl": "https://s.gravatar.com/avatar/b3616645c168b0b8a65e109a6b1cb010?s=128"
     },
     {
         "id": "damianhickey",
         "feedurl": "http://dhickey.ie/syndication.axd",
         "author": "Damian Hickey",
         "authoremail": "dhickey@gmail.com",
-        "gravatarurl": ""
+        "gravatarurl": "https://s.gravatar.com/avatar/e936bf226b0921257c47cfd7647e4578?s=128"
     }
 ]
