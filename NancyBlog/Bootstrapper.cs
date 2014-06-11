@@ -10,10 +10,7 @@
         {
             container.Register<IConfigSettings, ConfigSettings>();
 
-            var feedSetting = System.Configuration.ConfigurationManager.AppSettings.Get("blogfeeds");
-            var feedurls = feedSetting.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-            var feedService = new FeedService(feedurls);
+            var feedService = new FeedService();
 
             var cachedService = new CachedFeedService(feedService, container.Resolve<IConfigSettings>());
 

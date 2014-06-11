@@ -2,9 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.ServiceModel.Syndication;
 
     public class CachedFeedService : IFeedService
     {
@@ -23,7 +20,7 @@
         {
             if ((DateTime.Now - cacheDateTime).TotalMinutes > cacheMinutes)
             {
-                cachedItems = feedService.GetItems(feedCount, pagenum);
+                cachedItems = this.feedService.GetItems(feedCount, pagenum);
                 cacheDateTime = DateTime.Now;
             }
             return cachedItems;

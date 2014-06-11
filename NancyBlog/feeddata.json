@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id": "jonathanchannon",
+        "feedurl": "http://blog.jonathanchannon.com/feed.xml",
+        "author": "Jonathan Channon",
+        "authoremail": "jonathan.channon@gmail.com",
+        "gravatarurl": "https://s.gravatar.com/avatar/62e4df82d52221751142c68ee5d2ae0b?s=128"
+    },
+    {
+        "id": "philliphaydon",
+        "feedurl": "http://philliphaydon.com/feed.xml",
+        "author": "Phillip Haydon",
+        "authoremail": "phillip.haydon@gmail.com",
+        "gravatarurl": ""
+    },
+    {
+        "id": "stevenrobbins",
+        "feedurl": "http://feeds.feedburner.com/GrumpyDev?format=xml",
+        "author": "Steven Robbins",
+        "authoremail": "steve@robbins.me.uk",
+        "gravatarurl": ""
+    },
+    {
+        "id": "andreashåkansson",
+        "feedurl": "http://thecodejunkie.com/rss.xml",
+        "author": "Andreas Håkansson",
+        "authoremail": "andreas@selfinflicted.org",
+        "gravatarurl": ""
+    },
+    {
+        "id": "kristianhellang",
+        "feedurl": "http://kristian.hellang.com/rss/",
+        "author": "Kristian Hellang",
+        "authoremail": "kristian@hellang.com",
+        "gravatarurl": ""
+    },
+    {
+        "id": "damianhickey",
+        "feedurl": "http://dhickey.ie/syndication.axd",
+        "author": "Damian Hickey",
+        "authoremail": "dhickey@gmail.com",
+        "gravatarurl": ""
+    }
+]
