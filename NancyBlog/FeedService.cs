@@ -45,7 +45,16 @@ namespace NancyBlog
                     }
 
                     var link = x.Item.Links.FirstOrDefault();
-                    var locallink = link == null ? string.Empty : link.Uri.PathAndQuery;
+                    var locallink = string.Empty;
+                    if (link != null)
+                    {
+                        locallink = link.Uri.AbsolutePath;
+                        if (locallink.Contains("."))
+                        {
+                            locallink = link.Uri.AbsolutePath.Substring(0, link.Uri.AbsolutePath.IndexOf(".", System.StringComparison.Ordinal));
+                        }
+                    }
+
                     var originallink = link == null ? string.Empty : link.Uri.AbsoluteUri;
 
                     return new BlogPost
