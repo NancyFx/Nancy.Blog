@@ -44,7 +44,7 @@ namespace NancyBlog
                         authoremail = rssauthor == null ? metaauthor.AuthorEmail : rssauthor.Email;
                     }
 
-                    var link = x.Item.Links.FirstOrDefault();
+                    var link = x.Item.Links.FirstOrDefault(y=>y.RelationshipType == "alternate");
                     var locallink = string.Empty;
                     if (link != null)
                     {
@@ -57,14 +57,21 @@ namespace NancyBlog
 
                     var originallink = link == null ? string.Empty : link.Uri.AbsoluteUri;
 
+                    var summary = x.Item.Summary == null
+                        ? ((TextSyndicationContent) x.Item.Content).Text.Substring(0,
+                            ((TextSyndicationContent) x.Item.Content).Text.IndexOf(" ", 350,
+                                System.StringComparison.Ordinal)) + "..."
+                        : x.Item.Summary.Text;
+
                     return new BlogPost
                     {
                         Title = x.Item.Title.Text,
-                        Summary = x.Item.Summary.Text,
+                        Summary = summary,
                         Author = authorname,
                         AuthorEmail = authoremail,
                         Localink = locallink,
-                        OriginalLink = originallink
+                        OriginalLink = originallink,
+                        PublishedDate = x.Item.PublishDate.DateTime
                     };
 
                 })

@@ -6,7 +6,7 @@
     {
         public HomeModule(IFeedService feedService)
         {
-            Get["/"] = _  => Response.AsJson(feedService.GetItems());
+            Get["/"] = _ => View["index", feedService.GetItems()];
         }
     }
 }
