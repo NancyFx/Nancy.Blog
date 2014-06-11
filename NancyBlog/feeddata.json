@@ -40,5 +40,13 @@
         "author": "Damian Hickey",
         "authoremail": "dhickey@gmail.com",
         "gravatarurl": "https://s.gravatar.com/avatar/e936bf226b0921257c47cfd7647e4578?s=128"
+    },
+    {
+        "id": "christianhorsdal",
+        "feedurl": "http://www.horsdal-consult.dk/feeds/posts/default",
+        "author": "Christian Horsdal",
+        "authoremail": "c.horsdal@gmail.com",
+        "gravatarurl": "https://s.gravatar.com/avatar/0b16e1ac4e986b6dfc2c09571159c72f?s=128"
     }
+
 ]
