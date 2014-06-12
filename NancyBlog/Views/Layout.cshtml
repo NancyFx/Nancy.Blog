@@ -1,14 +1,116 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
 
 <!DOCTYPE html>
-
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
 <html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
-        <div>
-              @RenderBody()
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    @if (IsSectionDefined("title"))
+    {
+        <title>@RenderSection("title")</title>
+    }
+    else
+    {
+        <title>Nancy Blog</title>
+    }
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700%7CCourgette' rel='stylesheet' type='text/css'>
+    <link href="/content/css/style.css" media="screen" rel="stylesheet">
+    <link href="/content/css/screen.css" media="screen" rel="stylesheet">
+</head>
+<body>
+    <div itemscope itemtype="http://schema.org/Article" class="body_wrap">
+
+
+        <div class="logo">
+            <img alt="nancy logo" src="http://nancyfx.org/images/logo.png" />
         </div>
-    </body>
+
+        <!-- header -->
+        <div class="header">
+            <div class="header_inner">
+                <!-- topmenu -->
+                <nav id="topmenu" class="clearfix">
+                    <ul class="dropdown">
+                        <li class="menu-item-blue"><a href="/"><span>Home</span></a></li>
+                        <li class="menu-item-green"><a href="/about"><span>About Me</span></a></li>
+                        <li class="menu-item-red"><a href="http://jonathanchannon.com"><span>Resume</span></a></li>
+                        <li class="menu-item-pink"><a href="/archive"><span>Archive</span></a></li>
+                        <li class="menu-item-purple"><a href="/contact"><span>Contact</span></a></li>
+                    </ul>
+
+                    <select id="topm-select" onchange="location = this.value">
+                        <option value="">Site Navigation</option>
+                        <option value="/">Home</option>
+                        <option value="/about">About Me</option>
+                        <option value="http://www.jonathanchannon.com">Resume</option>
+                        <option value="/archive">Archive</option>
+                        <option value="/contact">Contact</option>
+                    </select>
+                </nav>
+                <!--/ topmenu -->
+
+            </div>
+        </div>
+        <!--/ header -->
+        <!-- middle -->
+        <div id="middle" class="full_width">
+            <div class="container clearfix">
+                <!-- content -->
+                <div class="">
+                    @RenderBody()
+                </div>
+                <!-- #content -->
+            </div>
+        </div>
+        <!--/ middle -->
+        <!-- footer social -->
+        <div class="footer_social">
+            <div class="footer_social_inner">
+                <div class="container">
+                    <!-- <a href="post-details.html#" class="social-fb">Facebook</a> -->
+                    <a href="http://twitter.com/NancyFx" class="social-twitter">Twitter</a>
+                    <a href="https://github.com/NancyFx" class="social-github">Github</a>
+                </div>
+            </div>
+        </div>
+        <!--/ footer social -->
+
+        <div class="footer">
+            <div class="container">
+                <p class="copyright"><a href="#">Powered by the community</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- main JS libs  -->
+    <script src="/content/js/libs/modernizr.min.js"></script>
+    <script src="/content/js/libs/respond.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!-- scripts  -->
+    <script src="/content/js/general.js"></script>
+    <script src="/content/js/hoverIntent.js"></script>
+
+    @*<script type='text/javascript'>
+        $(function () {
+            $("pre code").parent().each(function () {
+                if (!$(this).hasClass("prettyprint")) {
+                    $(this).addClass("prettyprint");
+                    a = true
+                }
+            });
+
+            //prettyPrint();
+        });
+    </script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian"></script>*@
+</body>
 </html>

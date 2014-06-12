@@ -1,11 +1,66 @@
 ﻿@{
     Layout = "Layout";
 }
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<NancyBlog.BlogPost>>
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyBlog.IndexViewModel>
 @using System.Collections.Generic
 
-@foreach (var item in Model)
+@foreach (var postPaged in Model.Posts)
 {
-    <h3><a href="@item.Localink">@item.Title - @item.PublishedDate.ToString("D")</a></h3>
-    @Html.Raw(@item.Summary)
+    <div class="post-item boxed post-detail">
+        <div class="post-title">
+            <h1><a href="@postPaged.Localink">@postPaged.Title</a></h1>
+        </div>
+        <div class="post-meta-top">
+            <span class="post-date">@postPaged.PublishedDate.ToString("MMMM dd, yyyy")</span> <span class="post-author">@postPaged.Author</span>
+
+        </div>
+        <div class="post-descr entry">
+            @Html.Raw(postPaged.Summary)
+        </div>
+
+        <p><a class="readmore" href="@postPaged.Localink">Read more...</a></p>
+        
+    </div>
 }
+<!-- Pagination links -->
+<div class="text-center">
+
+    @if (Model.HasPreviousPage && Model.HasNextPage)
+    {
+        if (Model.PreviousPage == 1)
+        {
+            <a href="/">Previous Page</a> @:|
+      }
+        else
+        {
+            <a href="/page@(Model.PreviousPage)">Previous Page</a> @:|
+      }
+    }
+
+    @if (Model.HasPreviousPage && !Model.HasNextPage)
+    {
+        if (Model.PreviousPage == 1)
+        {
+            <a href="/">Previous Page</a>
+        }
+        else
+        {
+            <a href="/page@(Model.PreviousPage)">Previous Page</a>
+        }
+    }
+
+    @if (!Model.HasPreviousPage)
+    {
+
+      <!--<a href="/">Previous Page</a>-->
+
+    }
+
+    @if (Model.HasNextPage)
+    {
+
+        <a href="/page@(Model.NextPage)">Next Page</a>
+
+    }
+
+</div>

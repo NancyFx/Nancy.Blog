@@ -4,11 +4,29 @@
     Layout = "Layout";
 }
 
-<a href="/">Home</a>
+@section title{
+  Nancy Blog - @Model.Title
+}
 
-<h1><a href="@Model.Localink">@Model.Title - @Model.PublishedDate.ToString("D")</a></h1>
 
-@Html.Raw(Model.Content)
-
-<a href="@Model.OriginalLink">Original Article by @Model.Author @Model.AuthorEmail</a>
+<div class="post-item boxed post-detail">
+    <div class="post-title">
+        <h1><a href="@Model.Localink">@Model.Title</a></h1>
+    </div>
+    <div class="post-meta-top">
+        <span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span> 
+    </div>
+    <div class="post-descr entry">
+        @Html.Raw(Model.Content)
+    </div>
+    @*<div id="tagcloud">
+        @foreach (var category in Model.Categories)
+        {
+            <a href="/category/@category.Url"><span>@category.Name</span></a>
+        }
+    </div>*@
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="@Model.Author">
+    </span>
+</div>
 

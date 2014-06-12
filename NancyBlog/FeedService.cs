@@ -1,5 +1,6 @@
 namespace NancyBlog
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
@@ -52,9 +53,7 @@ namespace NancyBlog
                     var originallink = link == null ? string.Empty : link.Uri.AbsoluteUri;
 
                     var summary = x.Item.Summary == null
-                        ? ((TextSyndicationContent) x.Item.Content).Text.Substring(0,
-                            ((TextSyndicationContent) x.Item.Content).Text.IndexOf(" ", 350,
-                                System.StringComparison.Ordinal)) + "..."
+                        ? ((TextSyndicationContent)x.Item.Content).Text.TruncateHtml(350,"")
                         : x.Item.Summary.Text;
 
                     var encodedcontent = x.Item.ElementExtensions.ReadElementExtensions<string>("encoded",

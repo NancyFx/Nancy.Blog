@@ -72,9 +72,11 @@
     <Compile Include="FeedService.cs" />
     <Compile Include="HomeModule.cs" />
     <Compile Include="IConfigSettings.cs" />
+    <Compile Include="IndexViewModel.cs" />
     <Compile Include="MetaData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHtmlExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -97,7 +99,203 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\css\audioplayer.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\cusel.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\custom.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\screen.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\body_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\box_bg_bot.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\box_lable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\buttons_sprite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\buttons_sprite_large.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\buttons_sprite_round.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\calendar_arrows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\comments_arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\comments_sub.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\comment_bg_bot.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\divider_line.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\dropdown_bg_bot.png.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\dropdown_parent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\dropdown_sub.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\footer_social.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\icons_sprite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\post_labels.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\ribbon_popular.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\icons\service_img_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\pricing_foot_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\slider_arrows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\slider_pagination.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\sort_box_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\styled_checkbox.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\styled_radiobutton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\tags_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\temp\client_1.jpg" />
+    <Content Include="Content\images\temp\client_2.jpg" />
+    <Content Include="Content\images\temp\client_3.jpg" />
+    <Content Include="Content\images\temp\entry_img_audio.jpg" />
+    <Content Include="Content\images\temp\flickr_1.jpg" />
+    <Content Include="Content\images\temp\flickr_2.jpg" />
+    <Content Include="Content\images\temp\flickr_3.jpg" />
+    <Content Include="Content\images\temp\flickr_4.jpg" />
+    <Content Include="Content\images\temp\flickr_5.jpg" />
+    <Content Include="Content\images\temp\flickr_6.jpg" />
+    <Content Include="Content\images\temp\flickr_7.jpg" />
+    <Content Include="Content\images\temp\flickr_8.jpg" />
+    <Content Include="Content\images\temp\gavatar_1.jpg" />
+    <Content Include="Content\images\temp\gavatar_2.jpg" />
+    <Content Include="Content\images\temp\gavatar_3.jpg" />
+    <Content Include="Content\images\temp\gavatar_4.jpg" />
+    <Content Include="Content\images\temp\icon_cat2_1.png" />
+    <Content Include="Content\images\temp\icon_cat2_2.png" />
+    <Content Include="Content\images\temp\icon_cat2_3.png" />
+    <Content Include="Content\images\temp\icon_cat2_4.png" />
+    <Content Include="Content\images\temp\icon_cat2_5.png" />
+    <Content Include="Content\images\temp\icon_cat2_6.png" />
+    <Content Include="Content\images\temp\icon_cat_1.png" />
+    <Content Include="Content\images\temp\icon_cat_2.png" />
+    <Content Include="Content\images\temp\icon_cat_3.png" />
+    <Content Include="Content\images\temp\icon_cat_4.png" />
+    <Content Include="Content\images\temp\icon_cat_5.png" />
+    <Content Include="Content\images\temp\icon_cat_6.png" />
+    <Content Include="Content\images\temp\post_thumb_1.jpg" />
+    <Content Include="Content\images\temp\post_thumb_2.jpg" />
+    <Content Include="Content\images\temp\post_thumb_3.jpg" />
+    <Content Include="Content\images\temp\post_thumb_4.jpg" />
+    <Content Include="Content\images\temp\slider_1_1.jpg" />
+    <Content Include="Content\images\temp\slider_1_2.jpg" />
+    <Content Include="Content\images\temp\slider_1_3.jpg" />
+    <Content Include="Content\images\temp\slider_2_1.jpg" />
+    <Content Include="Content\images\temp\slider_2_2.jpg" />
+    <Content Include="Content\images\temp\slider_2_3.jpg" />
+    <Content Include="Content\images\temp\slider_2_4.jpg" />
+    <Content Include="Content\images\temp\twitter_avatar.png" />
+    <Content Include="Content\images\temp\work_1.jpg" />
+    <Content Include="Content\images\temp\work_2.jpg" />
+    <Content Include="Content\images\temp\work_3.jpg" />
+    <Content Include="Content\images\temp\work_4.jpg" />
+    <Content Include="Content\images\temp\work_5.jpg" />
+    <Content Include="Content\js\audioplayer.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\cusel-min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\custom.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\general.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\hoverIntent.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery.carouFredSel.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery.customInput.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery.gmap.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery.masonry.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\jquery.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\modernizr.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\libs\respond.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

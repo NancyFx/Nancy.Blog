@@ -21,13 +21,15 @@
                 {
                     pageSize = 20;
                 }
-
-                var model = feedService.GetItems(pageSize, currentPage);
-                foreach (var blogPost in model)
+                var viewmodel = new IndexViewModel();
+                var posts = feedService.GetItems(pageSize, currentPage);
+                foreach (var blogPost in posts)
                 {
                     blogPost.Content = null; //Prevent serialization issues
                 }
-                return View["index", model];
+                viewmodel.Posts = posts;
+
+                return View["index", viewmodel];
             };
 
             Get["/{title}"] = parameters =>
