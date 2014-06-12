@@ -33,16 +33,9 @@ namespace NancyBlog
                 .Where(x => x.Item.Categories.Any(y => y.Name.ToLower() == "nancy" || y.Name.ToLower() == "nancyfx"))
                 .Select(x =>
                 {
-                    var rssauthor = x.Item.Authors.FirstOrDefault();
                     var metaauthor = metadataEntries.FirstOrDefault(y => y.Id == x.Id);
-                    var authorname = string.Empty;
-                    var authoremail = string.Empty;
-
-                    if (metaauthor != null)
-                    {
-                        authorname = rssauthor == null ? metaauthor.Author : rssauthor.Name;
-                        authoremail = rssauthor == null ? metaauthor.AuthorEmail : rssauthor.Email;
-                    }
+                    var authorname = metaauthor.Author;
+                    var authoremail = metaauthor.AuthorEmail;
 
                     var link = x.Item.Links.FirstOrDefault(y=>y.RelationshipType == "alternate");
                     var locallink = string.Empty;
@@ -70,9 +63,6 @@ namespace NancyBlog
                     var content = encodedcontent.Any()
                         ? encodedcontent.FirstOrDefault()
                         : ((TextSyndicationContent) x.Item.Content).Text;
-                        
-                        
-                        //feed.Items.First().ElementExtensions.ReadElementExtensions<string>("encoded", "http://purl.org/rss/1.0/modules/content/")
 
                     return new BlogPost
                     {

@@ -4,4 +4,11 @@
     Layout = "Layout";
 }
 
+<a href="/">Home</a>
+
+<h1><a href="@Model.Localink">@Model.Title - @Model.PublishedDate.ToString("D")</a></h1>
+
 @Html.Raw(Model.Content)
+
+<a href="@Model.OriginalLink">Original Article by @Model.Author @Model.AuthorEmail</a>
+
