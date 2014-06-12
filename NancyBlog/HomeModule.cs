@@ -9,10 +9,23 @@
         {
             Get["/"] = _ =>
             {
-                var model = feedService.GetItems();
+                int currentPage;
+                int pageSize;
+
+                if (!int.TryParse(Request.Query.currentpage.ToString(), out currentPage))
+                {
+                    currentPage = 0;
+                }
+
+                if (!int.TryParse(Request.Query.pagesize.ToString(), out pageSize))
+                {
+                    pageSize = 20;
+                }
+
+                var model = feedService.GetItems(pageSize, currentPage);
                 foreach (var blogPost in model)
                 {
-                    blogPost.Content = null;
+                    blogPost.Content = null; //Prevent serialization issues
                 }
                 return View["index", model];
             };
