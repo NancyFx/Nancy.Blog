@@ -12,5 +12,6 @@
         public string OriginalLink { get; set; }
         public string Author { get; set; }
         public string AuthorEmail { get; set; }
+        public Uri AuthorAvatarUrl { get; set; }
     }
 }
