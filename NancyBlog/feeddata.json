@@ -2,50 +2,57 @@
     {
         "id": "jonathanchannon",
         "feedurl": "http://blog.jonathanchannon.com/feed.xml",
-        "author": "Jonathan Channon",
-        "authoremail": "jonathan.channon@gmail.com",
-        "gravatarurl": "https://s.gravatar.com/avatar/62e4df82d52221751142c68ee5d2ae0b?s=128"
+        "author": {
+            "name": "Jonathan Channon",
+            "email": "jonathan.channon@gmail.com"
+        }
     },
     {
         "id": "philliphaydon",
         "feedurl": "http://philliphaydon.com/feed.xml",
-        "author": "Phillip Haydon",
-        "authoremail": "phillip.haydon@gmail.com",
-        "gravatarurl": "https://s.gravatar.com/avatar/ff94721f530a7cfd1bfa19b7e6e8af8f?s=128"
+        "author": {
+            "name": "Phillip Haydon",
+            "email": "phillip.haydon@gmail.com"
+        }
     },
     {
         "id": "stevenrobbins",
         "feedurl": "http://feeds.feedburner.com/GrumpyDev?format=xml",
-        "author": "Steven Robbins",
-        "authoremail": "steve@robbins.me.uk",
-        "gravatarurl": "https://s.gravatar.com/avatar/9922474b79fc3b5e52c7cd8bdff59e26?s=128"
+        "author": {
+            "name": "Steven Robbins",
+            "email": "steve@robbins.me.uk"
+        }
     },
     {
         "id": "andreashåkansson",
         "feedurl": "http://thecodejunkie.com/rss.xml",
-        "author": "Andreas Håkansson",
-        "authoremail": "andreas@selfinflicted.org",
-        "gravatarurl": "https://s.gravatar.com/avatar/0bf4194335195c9225f8f22e4e70b192?s=128"
+        "author": {
+            "name": "Andreas Håkansson",
+            "email": "andreas@selfinflicted.org"
+        }
     },
     {
         "id": "kristianhellang",
         "feedurl": "http://kristian.hellang.com/rss/",
-        "author": "Kristian Hellang",
-        "authoremail": "kristian@hellang.com",
-        "gravatarurl": "https://s.gravatar.com/avatar/b3616645c168b0b8a65e109a6b1cb010?s=128"
+        "author": {
+            "name": "Kristian Hellang",
+            "email": "kristian@hellang.com"
+        }
     },
     {
         "id": "damianhickey",
         "feedurl": "http://dhickey.ie/syndication.axd",
-        "author": "Damian Hickey",
-        "authoremail": "dhickey@gmail.com",
-        "gravatarurl": "https://s.gravatar.com/avatar/e936bf226b0921257c47cfd7647e4578?s=128"
+        "author": {
+            "name": "Damian Hickey",
+            "email": "dhickey@gmail.com"
+        }
     },
     {
         "id": "christianhorsdal",
         "feedurl": "http://www.horsdal-consult.dk/feeds/posts/default",
-        "author": "Christian Horsdal",
-        "authoremail": "c.horsdal@gmail.com",
-        "gravatarurl": "https://s.gravatar.com/avatar/0b16e1ac4e986b6dfc2c09571159c72f?s=128"
+        "author": {
+            "name": "Christian Horsdal",
+            "email": "c.horsdal@gmail.com"
+        }
     }
 ]
