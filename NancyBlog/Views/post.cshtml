@@ -1,0 +1,7 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyBlog.BlogPost>
+
+@{
+    Layout = "Layout";
+}
+
+@Html.Raw(Model.Content)

@@ -48,10 +48,11 @@ namespace NancyBlog
                     var locallink = string.Empty;
                     if (link != null)
                     {
-                        locallink = link.Uri.AbsolutePath;
+                        locallink = link.Uri.Segments.LastOrDefault();
                         if (locallink.Contains("."))
                         {
-                            locallink = link.Uri.AbsolutePath.Substring(0, link.Uri.AbsolutePath.IndexOf(".", System.StringComparison.Ordinal));
+                            locallink = link.Uri.Segments.LastOrDefault()
+                                        .Substring(0,link.Uri.Segments.LastOrDefault().IndexOf(".", System.StringComparison.Ordinal));
                         }
                     }
 
@@ -63,6 +64,16 @@ namespace NancyBlog
                                 System.StringComparison.Ordinal)) + "..."
                         : x.Item.Summary.Text;
 
+                    var encodedcontent = x.Item.ElementExtensions.ReadElementExtensions<string>("encoded",
+                        "http://purl.org/rss/1.0/modules/content/");
+
+                    var content = encodedcontent.Any()
+                        ? encodedcontent.FirstOrDefault()
+                        : ((TextSyndicationContent) x.Item.Content).Text;
+                        
+                        
+                        //feed.Items.First().ElementExtensions.ReadElementExtensions<string>("encoded", "http://purl.org/rss/1.0/modules/content/")
+
                     return new BlogPost
                     {
                         Title = x.Item.Title.Text,
@@ -71,7 +82,8 @@ namespace NancyBlog
                         AuthorEmail = authoremail,
                         Localink = locallink,
                         OriginalLink = originallink,
-                        PublishedDate = x.Item.PublishDate.DateTime
+                        PublishedDate = x.Item.PublishDate.DateTime,
+                        Content = content
                     };
 
                 })
@@ -83,9 +95,8 @@ namespace NancyBlog
             return data;
         }
 
-        public BlogPost GetItem(string title)
+        public BlogPost GetItem(string link)
         {
-            //Content = ((TextSyndicationContent)x.Content).Text,
             return new BlogPost();
         }
     }

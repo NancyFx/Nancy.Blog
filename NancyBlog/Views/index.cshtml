@@ -1,17 +1,11 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<NancyBlog.BlogPost>> 
+﻿@{
+    Layout = "Layout";
+}
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<System.Collections.Generic.IEnumerable<NancyBlog.BlogPost>>
 @using System.Collections.Generic
-<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-    @foreach (var item in Model)
-    {
-        <h3>@item.Title - @item.PublishedDate.ToString("D")</h3>
-        @item.Summary
-    }
-</body>
-</html>
+@foreach (var item in Model)
+{
+    <h3><a href="@item.Localink">@item.Title - @item.PublishedDate.ToString("D")</a></h3>
+    @Html.Raw(@item.Summary)
+}
