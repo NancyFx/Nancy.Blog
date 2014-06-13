@@ -53,7 +53,7 @@ namespace NancyBlog
                     var originallink = link == null ? string.Empty : link.Uri.AbsoluteUri;
 
                     var summary = x.Item.Summary == null
-                        ? ((TextSyndicationContent)x.Item.Content).Text.TruncateHtml(350,"")
+                        ? ((TextSyndicationContent)x.Item.Content).Text.TruncateHtml(700,"")
                         : x.Item.Summary.Text;
 
                     var encodedcontent = x.Item.ElementExtensions.ReadElementExtensions<string>("encoded",

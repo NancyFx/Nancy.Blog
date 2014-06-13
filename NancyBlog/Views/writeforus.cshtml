@@ -1,0 +1,32 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+@{
+    Layout = "Layout";
+}
+
+@section title{
+    Nancy Blog - Write For Us
+}
+
+
+<div class="post-item boxed post-detail">
+    <div class="post-title">
+        <h1><a href="/write-for-us">Write For Us</a></h1>
+    </div>
+    <div class="post-meta-top">
+        @*<span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span>*@
+    </div>
+    <div class="post-descr entry">
+        If you'd like to write for us....
+    </div>
+    @*<div id="tagcloud">
+            @foreach (var category in Model.Categories)
+            {
+                <a href="/category/@category.Url"><span>@category.Name</span></a>
+            }
+        </div>*@
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="Nancy">
+    </span>
+</div>
+

@@ -42,6 +42,8 @@
 
                 return View["post", post];
             };
+
+            Get["/write-for-us"] = _ => View["writeforus"];
         }
     }
 }

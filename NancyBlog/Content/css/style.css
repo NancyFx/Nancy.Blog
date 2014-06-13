@@ -332,10 +332,10 @@ img.alignright {
 /* Topmenu */
 /*-----------------------------------*/
 .header {
-	background:url("../images/divider_line.gif") top repeat-x;
+	background:url("../images/divider_line.png") top repeat-x;
 	padding:2px 0 0}
 .header_inner {
-	background:url("../images/divider_line.gif") bottom repeat-x;
+	background:url("../images/divider_line.png") bottom repeat-x;
 	padding:8px 0 11px 0;}
 	
 /* topmenu Dropdown */
@@ -374,7 +374,7 @@ img.alignright {
 	font-size:16px;
 	line-height:1em;
 	font-weight:700;
-	text-shadow:0 1px 1px #fff;}
+	/*text-shadow:0 1px 1px #fff;*/}
 
 .dropdown li {
 	display:inline-block;
@@ -475,7 +475,7 @@ img.alignright {
 .dropdown .current-menu-ancestor:hover .current-menu-item a,
 .dropdown .current-menu-ancestor:hover .current-menu-ancestor a,
 .dropdown .current-menu-ancestor:hover .current-menu-ancestor .current-menu-item a {
-	color:#1f1f1f;}
+	color:#fff;}
 
 .dropdown li ul {
 	margin:0;
@@ -568,7 +568,7 @@ img.alignright {
 
 .after_header {
 	width:100%;
-	background:url("../images/divider_line.gif") bottom repeat-x;
+	background:url("../images/divider_line.png") bottom repeat-x;
 	padding:4px 0 8px 0}
 
 .header_map {
@@ -614,10 +614,10 @@ img.alignright {
 /* Footer Social */
 /*-----------------------------------*/
 .footer_social {
-	background:url("../images/divider_line.gif") top repeat-x;
+	background:url("../images/divider_line.png") top repeat-x;
 	padding:2px 0 0}
 .footer_social_inner {
-	background:url("../images/divider_line.gif") bottom repeat-x;
+	background:url("../images/divider_line.png") bottom repeat-x;
 	padding:18px 0 21px 0;}
 
 .footer_social .container {	
@@ -631,13 +631,13 @@ img.alignright {
 	padding-left:30px;
 	font-size:16px;
 	color:#4b619a;
-	text-shadow:0 1px 1px #fff;
+	/*text-shadow:0 1px 1px #fff;*/
 	text-transform:uppercase;}
 
 .footer_social .social-fb {background-position:0 0}
 .footer_social .social-twitter {background-position:0 -32px; color:#3fc7cb;}
 .footer_social .social-linkedin {background-position:0 -64px; }
-.footer_social .social-github {background-position:0 -96px; color:#000000;}
+.footer_social .social-github {background:url("../images/icons/github.png") 0 0 no-repeat; /*background-position:0 -96px;*/ color:#ffffff;}
 .footer_social .social-rss {background-position:0 -128px; color:#e54a0d;}
 
 /*-----------------------------------*/
@@ -646,7 +646,7 @@ img.alignright {
 .footer .container {
 	padding:30px 0;
 	color:#606060;
-	text-shadow:0 1px 1px #fff;
+	/*text-shadow:0 1px 1px #fff;*/
 	text-align:center;}
 
 .footer p {
@@ -856,7 +856,7 @@ img.alignright {
 
 
 .post-descr {
-	background:url("../images/divider_line.gif") top repeat-x;
+	background:url("../images/divider_line.png") top repeat-x;
 	padding:20px 0 20px 0;
 	margin-top:20px}
 
