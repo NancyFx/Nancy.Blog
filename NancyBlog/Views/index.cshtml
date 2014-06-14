@@ -1,8 +1,7 @@
 ﻿@{
     Layout = "Layout";
 }
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyBlog.IndexViewModel>
-@using System.Collections.Generic
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyBlog.Model.IndexViewModel>
 
 @foreach (var postPaged in Model.Posts)
 {
@@ -19,7 +18,7 @@
         </div>
 
         <p><a class="readmore" href="@postPaged.Localink">Read more...</a></p>
-        
+
     </div>
 }
 <!-- Pagination links -->
@@ -30,11 +29,11 @@
         if (Model.PreviousPage == 1)
         {
             <a href="/">Previous Page</a> @:|
-      }
+        }
         else
         {
-            <a href="/page@(Model.PreviousPage)">Previous Page</a> @:|
-      }
+            <a href="/?currentpage=@(Model.PreviousPage)">Previous Page</a> @:|
+        }
     }
 
     @if (Model.HasPreviousPage && !Model.HasNextPage)
@@ -45,7 +44,7 @@
         }
         else
         {
-            <a href="/page@(Model.PreviousPage)">Previous Page</a>
+            <a href="/?currentpage=@(Model.PreviousPage)">Previous Page</a>
         }
     }
 
@@ -59,8 +58,7 @@
     @if (Model.HasNextPage)
     {
 
-        <a href="/page@(Model.NextPage)">Next Page</a>
+        <a href="/?currentpage=@(Model.NextPage)">Next Page</a>
 
     }
-
 </div>

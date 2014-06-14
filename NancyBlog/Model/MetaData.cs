@@ -1,4 +1,4 @@
-﻿namespace NancyBlog
+﻿namespace NancyBlog.Model
 {
     public class MetaData
     {

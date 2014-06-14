@@ -64,18 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogPost.cs" />
+    <Compile Include="Model\BlogPost.cs" />
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="CachedFeedService.cs" />
+    <Compile Include="Services\CachedFeedService.cs" />
     <Compile Include="ConfigSettings.cs" />
-    <Compile Include="IFeedService.cs" />
-    <Compile Include="FeedService.cs" />
-    <Compile Include="HomeModule.cs" />
+    <Compile Include="Services\IFeedService.cs" />
+    <Compile Include="Modules\HomeModule.cs" />
     <Compile Include="IConfigSettings.cs" />
-    <Compile Include="IndexViewModel.cs" />
-    <Compile Include="MetaData.cs" />
+    <Compile Include="Model\IndexViewModel.cs" />
+    <Compile Include="Model\MetaData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IPostService.cs" />
+    <Compile Include="Services\PostService.cs" />
     <Compile Include="StringHtmlExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

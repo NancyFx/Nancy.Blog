@@ -1,10 +1,11 @@
 ﻿//This code came from https://raw.githubusercontent.com/robvolk/Helpers.Net/master/Src/Helpers.Net/StringHtmlExtensions.cs
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
 
-namespace System
+namespace NancyBlog
 {
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public static class StringHtmlExtensions
     {
         /// <summary>

@@ -1,4 +1,4 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<string[]>
 
 @{
     Layout = "Layout";
@@ -17,7 +17,7 @@
         @*<span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span>*@
     </div>
     <div class="post-descr entry">
-        If you'd like to write for us....
+        <p>To get your posts visible on the Nancy community blog, please send a PR for the feeddata.json file in <a href="https://github.com/jchannon/NancyBlog">this</a> Github repository with your details in it or send us an email at <a href="mailto:nancy@nancyfx.org">nancy@nancyfx.org</a> and ensure your blog post is tagged/categorised with @ViewBag.NancyCategories</p>
     </div>
     @*<div id="tagcloud">
             @foreach (var category in Model.Categories)

@@ -1,11 +1,13 @@
-﻿namespace NancyBlog
+﻿namespace NancyBlog.Modules
 {
+    using System;
     using System.Linq;
     using Nancy;
+    using Services;
 
     public class HomeModule : NancyModule
     {
-        public HomeModule(IFeedService feedService)
+        public HomeModule(IPostService postService, IFeedService feedService, IConfigSettings configSettings)
         {
             Get["/"] = _ =>
             {
@@ -14,20 +16,15 @@
 
                 if (!int.TryParse(Request.Query.currentpage.ToString(), out currentPage))
                 {
-                    currentPage = 0;
+                    currentPage = 1;
                 }
 
                 if (!int.TryParse(Request.Query.pagesize.ToString(), out pageSize))
                 {
-                    pageSize = 20;
+                    pageSize = 10;
                 }
-                var viewmodel = new IndexViewModel();
-                var posts = feedService.GetItems(pageSize, currentPage);
-                foreach (var blogPost in posts)
-                {
-                    blogPost.Content = null; //Prevent serialization issues
-                }
-                viewmodel.Posts = posts;
+
+                var viewmodel = postService.GetViewModel(pageSize, currentPage);
 
                 return View["index", viewmodel];
             };
@@ -43,7 +40,15 @@
                 return View["post", post];
             };
 
-            Get["/write-for-us"] = _ => View["writeforus"];
+            Get["/write-for-us"] = _ =>
+            {
+                var model = configSettings.GetAppSetting("nancycategories")
+                    .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                ViewBag.NancyCategories = string.Join(" or ", model);
+
+                return View["writeforus"];
+            };
         }
     }
 }
