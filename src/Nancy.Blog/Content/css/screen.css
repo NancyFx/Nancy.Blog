@@ -51,8 +51,6 @@
 		padding:3px 0}
 		
 	/* Middle content */
-	#middle .container {
-		padding:30px 0}
 	
 	#middle .content,
 	#middle .sidebar {
@@ -229,9 +227,6 @@
 	#topm-select {
 		display: none;}
 		
-	/* Middle content */
-	#middle .container {
-		padding:50px 0}
 	
 	#middle .content,
 	#middle .sidebar {
@@ -363,13 +358,6 @@
 		width:500px;}	
 	.grid_view .post-item.boxed {
 		width:340px}		
-	
-		
-	.post-detail.boxed {
-		padding-bottom:15px}
-	
-	
-	
 	
 	
 	.post-title h1,
