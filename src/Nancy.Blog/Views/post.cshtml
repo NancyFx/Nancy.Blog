@@ -19,7 +19,7 @@
     <div class="post-descr entry">
         @Html.Raw(Model.Content)
         <p></p>
-        <p><strong>"This post was aggregated from @Model.OriginalLink and all comments should be submited on the original post"</strong></p>
+        <p><strong>"This post was aggregated from <a href="@Model.OriginalLink">@Model.OriginalLink</a> and all comments should be submitted on the original post"</strong></p>
     </div>
     @*<div id="tagcloud">
         @foreach (var category in Model.Categories)
