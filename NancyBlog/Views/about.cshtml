@@ -11,13 +11,16 @@
 
 <div class="post-item boxed post-detail">
     <div class="post-title">
-        <h1><a href="/write-for-us">Write For Us</a></h1>
+        <h1><a href="/about">About</a></h1>
     </div>
     <div class="post-meta-top">
         @*<span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span>*@
     </div>
     <div class="post-descr entry">
+        <h2>Blog Posts</h2>
         <p>To get your posts visible on the Nancy community blog, please send a PR for the feeddata.json file in <a href="https://github.com/jchannon/NancyBlog">this</a> Github repository with your details in it or send us an email at <a href="mailto:nancy@nancyfx.org">nancy@nancyfx.org</a> and ensure your blog post is tagged/categorised with @ViewBag.NancyCategories</p>
+        <h2>Disclaimer</h2>
+        <p><strong>The blog posts that appear on this site are aggregated via RSS feeds.  We assume no responsibility or copyright of the content.  </strong></p>
     </div>
     @*<div id="tagcloud">
             @foreach (var category in Model.Categories)

@@ -904,9 +904,16 @@ img.alignright {
 .link-comments {
 	color:#868686;
 	background-position:0 -58px;
-	font-weight:bold;
+	
 	text-transform:uppercase;
 	margin:0}
+
+.link-comments a {
+    font-weight: bold;
+    color:#868686;
+}
+
+.link-comments a:hover, a:focus { color: #ea4f34; }
 
 .post-detail .link-comments {
 	/*position:absolute;

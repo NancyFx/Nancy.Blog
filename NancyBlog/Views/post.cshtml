@@ -14,10 +14,12 @@
         <h1><a href="@Model.Localink">@Model.Title</a></h1>
     </div>
     <div class="post-meta-top">
-        <span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span> 
+        <span class="post-date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</span>  <span class="post-author">@Model.Author</span> <span class="link-comments"><a href="@Model.OriginalLink">Original Link</a></span>
     </div>
     <div class="post-descr entry">
         @Html.Raw(Model.Content)
+        <p></p>
+        <p><strong>"This post was aggregated from @Model.OriginalLink and all comments should be submited on the original post"</strong></p>
     </div>
     @*<div id="tagcloud">
         @foreach (var category in Model.Categories)
@@ -25,7 +27,8 @@
             <a href="/category/@category.Url"><span>@category.Name</span></a>
         }
     </div>*@
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+    
+  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="@Model.Author">
     </span>
 </div>

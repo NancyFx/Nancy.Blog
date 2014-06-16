@@ -99,7 +99,7 @@
     <None Include="Views\post.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Views\writeforus.cshtml">
+    <None Include="Views\about.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

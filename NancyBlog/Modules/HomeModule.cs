@@ -40,14 +40,14 @@
                 return View["post", post];
             };
 
-            Get["/write-for-us"] = _ =>
+            Get["/about"] = _ =>
             {
                 var model = configSettings.GetAppSetting("nancycategories")
                     .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
                 ViewBag.NancyCategories = string.Join(" or ", model);
 
-                return View["writeforus"];
+                return View["about"];
             };
         }
     }
