@@ -1,4 +1,4 @@
-﻿namespace NancyBlog
+﻿namespace Nancy.Blog
 {
     public interface IConfigSettings
     {

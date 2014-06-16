@@ -1,4 +1,4 @@
-﻿namespace NancyBlog.Model
+﻿namespace Nancy.Blog.Model
 {
     using System.Collections.Generic;
 

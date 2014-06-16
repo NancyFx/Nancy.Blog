@@ -1,7 +1,6 @@
-﻿namespace NancyBlog.Modules
+﻿namespace Nancy.Blog.Modules
 {
     using System;
-    using System.Linq;
     using Nancy;
     using Services;
 

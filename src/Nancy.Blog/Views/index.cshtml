@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "Layout";
 }
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NancyBlog.Model.IndexViewModel>
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Model.IndexViewModel>
 
 @foreach (var postPaged in Model.Posts)
 {

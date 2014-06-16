@@ -1,8 +1,7 @@
-﻿namespace NancyBlog
+﻿namespace Nancy.Blog
 {
     using System;
     using Nancy.Hosting.Self;
-    using RestSharp;
 
     class Program
     {

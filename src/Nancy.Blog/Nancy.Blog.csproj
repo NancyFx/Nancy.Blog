@@ -7,8 +7,8 @@
     <ProjectGuid>{E1CDC236-F47B-4142-9199-DE7B088B0BC2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NancyBlog</RootNamespace>
-    <AssemblyName>NancyBlog</AssemblyName>
+    <RootNamespace>Nancy.Blog</RootNamespace>
+    <AssemblyName>Nancy.Blog</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

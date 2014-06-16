@@ -1,6 +1,6 @@
 ﻿//This code came from https://raw.githubusercontent.com/robvolk/Helpers.Net/master/Src/Helpers.Net/StringHtmlExtensions.cs
 
-namespace NancyBlog
+namespace Nancy.Blog
 {
     using System.Collections.Generic;
     using System.Text;

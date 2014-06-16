@@ -1,6 +1,5 @@
-﻿namespace NancyBlog
+﻿namespace Nancy.Blog
 {
-    using System;
     using Nancy;
     using Nancy.TinyIoc;
     using Services;
