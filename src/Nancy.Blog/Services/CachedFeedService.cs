@@ -8,17 +8,20 @@
     using System.ServiceModel.Syndication;
     using System.Xml;
     using Model;
-    using ServiceStack.Text;
+    using ServiceStack;
+
 
     public class CachedFeedService : IFeedService
     {
+        private readonly IRootPathProvider rootPathProvider;
         private readonly int cacheMinutes;
         private IEnumerable<BlogPost> cachedItems = Enumerable.Empty<BlogPost>();
         private DateTime cacheDateTime;
         private readonly IEnumerable<string> nancyCategories;
 
-        public CachedFeedService(IConfigSettings configSettings)
+        public CachedFeedService(IConfigSettings configSettings, IRootPathProvider rootPathProvider)
         {
+            this.rootPathProvider = rootPathProvider;
             cacheMinutes = configSettings.GetAppSetting<int>("cacheminutes");
             nancyCategories = configSettings.GetAppSetting("nancycategories")
                 .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
@@ -36,7 +39,7 @@
 
         private IEnumerable<BlogPost> GetItemsForCache(int feedCount, int pagenum)
         {
-            string json = File.ReadAllText("feeddata.json");
+            string json = File.ReadAllText(rootPathProvider.GetRootPath() + "feeddata.json");
             var metadataEntries = json.FromJson<MetaData[]>();
 
             var syndicationFeeds = GetSyndicationFeeds(metadataEntries);
