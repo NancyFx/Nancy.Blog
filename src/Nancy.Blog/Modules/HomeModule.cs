@@ -48,6 +48,8 @@
 
                 return View["about"];
             };
+
+            Get["/rss"] = x => Response.AsRSS(feedService.GetItems(), "Nancy Blog", "http://blog.nancyfx.org/", "feed.xml");
         }
     }
 }
