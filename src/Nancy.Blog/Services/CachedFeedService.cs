@@ -114,29 +114,41 @@
             return nancyCategories.Any(x => x.Equals(category.Name, StringComparison.OrdinalIgnoreCase));
         }
 
-        private static Dictionary<string, SyndicationFeed> GetSyndicationFeeds(IEnumerable<MetaData> metadataEntries)
+        private static IEnumerable<KeyValuePair<string, SyndicationFeed>> GetSyndicationFeeds(IEnumerable<MetaData> metadataEntries)
         {
-            var syndicationFeeds = new Dictionary<string, SyndicationFeed>();
+            var syndicationFeeds = new List<KeyValuePair<string, SyndicationFeed>>();
             foreach (var metadata in metadataEntries)
             {
-                try
-                {
-                    var reader = XmlReader.Create(metadata.FeedUrl);
-                    var feed = SyndicationFeed.Load(reader);
-
-                    reader.Close();
-                    if (feed != null)
-                    {
-                        syndicationFeeds.Add(metadata.Id, feed);
-                    }
-                }
-                catch (WebException exception)
-                {
-                    //Unable to load RSS feed
-                }
+                GetFeed(metadata.FeedUrl, metadata.Id, syndicationFeeds);
             }
 
             return syndicationFeeds;
+        }
+
+        private static void GetFeed(string url, string id, List<KeyValuePair<string, SyndicationFeed>> syndicationFeeds)
+        {
+            try
+            {
+                var reader = XmlReader.Create(url);
+                var feed = SyndicationFeed.Load(reader);
+
+                reader.Close();
+                if (feed != null)
+                {
+                    syndicationFeeds.Add(new KeyValuePair<string, SyndicationFeed>(id, feed));
+                    if (feed.Links.Any(x => x.RelationshipType == "next"))
+                    {
+                        foreach (var pagingLink in feed.Links.Where(x => x.RelationshipType == "next"))
+                        {
+                            GetFeed(pagingLink.Uri.AbsoluteUri, id, syndicationFeeds);
+                        }
+                    }
+                }
+            }
+            catch (WebException exception)
+            {
+                //Unable to load RSS feed
+            }
         }
 
         public BlogPost GetItem(string link)
