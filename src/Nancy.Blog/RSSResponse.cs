@@ -61,7 +61,7 @@
             var feed = new SyndicationFeed(
                 RssTitle,
                 RssTitle, /* Using Title also as Description */
-                new Uri(siteUrl + "/" + feedfileName),
+                new Uri(siteUrl  + feedfileName),
                 items);
 
             var formatter = new Rss20FeedFormatter(feed);
