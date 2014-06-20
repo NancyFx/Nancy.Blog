@@ -84,7 +84,7 @@
             //Given
             var fakefeedService = GetFeedService();
             A.CallTo(() => fakefeedService.GetItem(A<string>.Ignored)).Returns(null);
-            
+
             var browser = new Browser(GetBootstrapper(feedService: fakefeedService));
 
             //When
@@ -118,6 +118,38 @@
 
             //Then
             result.Body["head title"].AllShouldContain("Awesome Post");
+        }
+
+        [Fact]
+        public void Get_Root_Returns_View_With_Data()
+        {
+            //Given
+            var fakepostService = GetPostService();
+            A.CallTo(() => fakepostService.GetViewModel(10, 1)).Returns(new IndexViewModel
+            {
+                Posts = new[]
+                {
+                    new BlogPost
+                    {
+                        Title = "Awesome Post",
+                        Author = "Vincent Vega",
+                        AuthorEmail = "vincentvega@home.com",
+                        Content = "<p>My post</p>",
+                        Localink = "awesome-post",
+                        OriginalLink = "http://vincentvega.com/2014/06/01/awesome-post",
+                        PublishedDate = DateTime.UtcNow.AddDays(-7),
+                        Summary = "Read this, its awesome"
+                    }
+                }
+            });
+
+            var browser = new Browser(GetBootstrapper(postService: fakepostService));
+
+            //When
+            var result = browser.Get("/");
+
+            //Then
+            result.Body["a.readmore"].ShouldExist();
         }
 
         private ConfigurableBootstrapper GetBootstrapper(IPostService postService = null,
