@@ -54,5 +54,12 @@
         "author": "Jim Liddell",
         "authoremail": "jim@liddellj.com",
         "gravatarurl": "https://s.gravatar.com/avatar/98f93d43537cdf3fb5e8b13876633111?s=128"
+    },
+    {
+        "id": "matmcloughlin",
+        "feedurl": "http://mat-mcloughlin.net/rss/",
+        "author": "Mat McLoughlin",
+        "authoremail": "mathew.mcloughlin@gmail.com",
+        "gravatarurl": "https://www.gravatar.com/avatar/0d7a41c5106cac6f1d711f18c7d80e8as=128"
     }
 ]
