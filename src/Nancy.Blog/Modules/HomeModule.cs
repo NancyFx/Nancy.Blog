@@ -33,7 +33,7 @@
                 var post = feedService.GetItem(parameters.title);
                 if (post == null)
                 {
-                    return View["404"];
+                    return View["404"].WithStatusCode(404);
                 }
 
                 return View["post", post];
