@@ -35,7 +35,7 @@ body {
 	color:#313131;
 	font-size:14px;
 	line-height:1.5em;
-    background: #000;}
+	background: #000;}
 
 .body_wrap {
 	width:100%;
@@ -121,7 +121,7 @@ h1 span, h2 span, h3 span ,h4 span, h5 span, h6 span {
 	font-weight:400}
 
 .post-detail .entry h1 {
-	margin:0 0 1em 0;
+	margin:0 0 1em;
 	padding:0}
 	
 .post-detail .entry h2 {	
@@ -171,10 +171,10 @@ kbd {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2),0 0 0 1px #ffffff inset;
   background-color: #FAFAFA;
-  border-color: #CCCCCC #CCCCCC #FFFFFF;
+  border-color: #ccc #ccc #fff;
   border-style: solid solid none;
   border-width: 1px 1px medium;
-  color: #444444;
+  color: #444;
   font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -334,7 +334,7 @@ img.alignright {
 .header {
 	padding:2px 0 0}
 .header_inner {
-	padding:8px 0 11px 0;}
+	padding:8px 0 11px;}
 	
 /* topmenu Dropdown */
 #topmenu {
@@ -346,21 +346,20 @@ img.alignright {
 #topm-select {
 	position:absolute;
 	top:5px;
-
-  color:#333;
-  font-size:14px;
-  width:242px;
-  margin:3px 0;
-  line-height: 16px;
-  resize:none;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #e1e1e1;
-  font-weight: bold;
-  border:1px solid #b2b2b2;
-  border-bottom: 1px solid #e7e7e7;
-  border-right: 1px solid #e7e7e7;
-  border-radius: 5px;
-  box-shadow:inset 1px 1px 1px 1px rgba(198,198,198,0.7);
+	color:#333;
+	font-size:14px;
+	width:242px;
+	margin:3px 0;
+	line-height: 16px;
+	resize:none;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #e1e1e1;
+	font-weight: bold;
+	border:1px solid #b2b2b2;
+	border-bottom: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	border-radius: 5px;
+	box-shadow:inset 1px 1px 1px 1px rgba(198,198,198,0.7);
 }
 
 .dropdown {	
@@ -379,7 +378,7 @@ img.alignright {
 	position:relative;
 	list-style:none;
 	margin:0 16px;
-	padding:15px 0 15px 0;}
+	padding:15px 0;}
 
 .dropdown li a {
 	display:block;
@@ -526,7 +525,7 @@ img.alignright {
 	position:absolute;
 	top:0px;
 	left: 194px;
-	padding:10px 0 10px 0px}
+	padding:10px 0}
 
 .dropdown li ul li.first:hover>ul {
 	top:2px}
@@ -567,7 +566,7 @@ img.alignright {
 .after_header {
 	width:100%;
 	background:url("../images/divider_line.png") bottom repeat-x;
-	padding:4px 0 8px 0}
+	padding:4px 0 8px}
 
 .header_map {
 	height:236px}
@@ -599,7 +598,7 @@ img.alignright {
 
 #middle.full_width .post-detail.boxed {
 	width:820px;
-	margin:0 auto 50px auto}
+	margin:0 auto 50px}
 
 #middle.nosidebar .content {
 	margin:0 auto;
@@ -611,7 +610,7 @@ img.alignright {
 .footer_social {
 	padding:2px 0 0}
 .footer_social_inner {
-	padding:18px 0 21px 0;}
+	padding:18px 0 21px;}
 
 .footer_social .container {	
 	text-align:center}
@@ -754,7 +753,6 @@ img.alignright {
 	
 /* widget tag cloud */	
 .widget_tag_cloud .tagcloud, #tagcloud {
-
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;}
 	
@@ -799,7 +797,7 @@ img.alignright {
 
 .list_view .post-item {
 	width:620px;
-	margin:0 auto 20px auto;}
+	margin:0 auto 20px;}
 
 .list_view .post-item.boxed {
 	width:500px}
@@ -850,7 +848,7 @@ img.alignright {
 
 .post-descr {
 	background:url("../images/divider_line.png") top repeat-x;
-	padding:20px 0 20px 0;
+	padding:20px 0;
 	margin-top:20px}
 
 .post-title h1,
@@ -897,7 +895,6 @@ img.alignright {
 .link-comments {
 	color:#868686;
 	background-position:0 -58px;
-	
 	text-transform:uppercase;
 	margin:0}
 
@@ -914,7 +911,7 @@ img.alignright {
 	
 .entry p,
 .post-detail .post-descr p {
-	margin:0 0 16px 0}
+	margin:0 0 16px}
 
 .entry a, .text-center a, .readmore {
 	color:#ea4f34}
@@ -983,7 +980,7 @@ img.alignright {
 
   /* Set the geometry. If you fiddle with these you'll also need
      to tweak the top and right values in .github-fork-ribbon. */
-width: 200px;
+  width: 200px;
   line-height: 20px;
 
   /* Set the layout properties */
