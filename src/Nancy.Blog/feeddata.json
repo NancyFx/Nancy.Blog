@@ -47,5 +47,12 @@
         "author": "Christian Horsdal",
         "authoremail": "c.horsdal@gmail.com",
         "gravatarurl": "https://s.gravatar.com/avatar/0b16e1ac4e986b6dfc2c09571159c72f?s=128"
+    },
+    {
+        "id": "jimliddell",
+        "feedurl": "http://liddellj.com/rss",
+        "author": "Jim Liddell",
+        "authoremail": "jim@liddellj.com",
+        "gravatarurl": "https://s.gravatar.com/avatar/98f93d43537cdf3fb5e8b13876633111?s=128"
     }
 ]
