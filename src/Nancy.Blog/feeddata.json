@@ -61,5 +61,12 @@
         "author": "Mat McLoughlin",
         "authoremail": "mathew.mcloughlin@gmail.com",
         "gravatarurl": "https://www.gravatar.com/avatar/0d7a41c5106cac6f1d711f18c7d80e8as=128"
+    },
+    {
+        "id": "marcushammarberg",
+        "feedurl": "http://www.marcusoft.net/feeds/posts/default",
+        "author": "Marcus Hammarberg",
+        "authoremail": "marcusoftnet@gmail.com",
+        "gravatarurl": "http://www.gravatar.com/avatar/38b83e237bba3d976eeab19e11fcdc3c.png"
     }
 ]
