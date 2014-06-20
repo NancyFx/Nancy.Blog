@@ -40,7 +40,9 @@
         private IEnumerable<BlogPost> GetItemsForCache(int feedCount, int pagenum)
         {
             string json = File.ReadAllText(rootPathProvider.GetRootPath() + "feeddata.json");
-            var metadataEntries = json.FromJson<MetaData[]>();
+            var metadataEntries = json.FromJson<MetaData[]>()
+                                      .Where(m => m != null)
+                                      .ToArray();
 
             var syndicationFeeds = GetSyndicationFeeds(metadataEntries);
 
