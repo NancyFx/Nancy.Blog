@@ -129,10 +129,12 @@
         {
             try
             {
-                var reader = XmlReader.Create(url);
-                var feed = SyndicationFeed.Load(reader);
+                SyndicationFeed feed = null;
+                using(var reader = XmlReader.Create(url))
+                {
+                  feed = SyndicationFeed.Load(reader);
+                }
 
-                reader.Close();
                 if (feed != null)
                 {
                     syndicationFeeds.Add(new KeyValuePair<string, SyndicationFeed>(id, feed));
