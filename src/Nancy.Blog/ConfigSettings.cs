@@ -18,7 +18,7 @@ namespace Nancy.Blog
             var value = GetAppSetting(propertyName);
 
             T returnVal = default(T);
-            if (String.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value))
                 return returnVal;
 
             returnVal = TryParse<T>(value);
