@@ -27,6 +27,8 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 img { max-width:100% !important; height:auto !important}
 
+iframe{max-width:100%;} /* Fix vimeo videos from breaking layout */
+
 /*-----------------------------------*/
 /* General Styles */
 /*-----------------------------------*/
@@ -1093,6 +1095,9 @@ transform: rotate(-45deg);
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
+.valid{border:1px solid #70A41B!important; overflow:hidden;} /*#70A41B*/
+.error{overflow:hidden; border:1px solid red!important;}
+
 /*-----------------------------------*/
 /* Print styles */
 /*-----------------------------------*/
@@ -1110,6 +1115,3 @@ transform: rotate(-45deg);
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-.valid{border:1px solid #70A41B!important; overflow:hide;} /*#70A41B*/
-.error{overflow:hide; border:1px solid red!important;}
