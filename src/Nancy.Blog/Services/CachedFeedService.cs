@@ -69,8 +69,10 @@
                     var originallink = link == null ? string.Empty : link.Uri.AbsoluteUri;
 
                     var summary = x.Item.Summary == null
-                        ? ((TextSyndicationContent)x.Item.Content).Text.TruncateHtml(700, "")
+                        ? ((TextSyndicationContent)x.Item.Content).Text
                         : x.Item.Summary.Text;
+
+                    var truncatedSummary = summary.TruncateHtml(700, "");
 
                     var encodedcontent = x.Item.ElementExtensions.ReadElementExtensions<string>("encoded",
                         "http://purl.org/rss/1.0/modules/content/");
@@ -93,7 +95,7 @@
                     return new BlogPost
                     {
                         Title = x.Item.Title.Text,
-                        Summary = summary,
+                        Summary = truncatedSummary,
                         Author = authorname,
                         AuthorEmail = authoremail,
                         Localink = locallink,
