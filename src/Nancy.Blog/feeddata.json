@@ -68,5 +68,12 @@
         "author": "Marcus Hammarberg",
         "authoremail": "marcusoftnet@gmail.com",
         "gravatarurl": "http://www.gravatar.com/avatar/38b83e237bba3d976eeab19e11fcdc3c.png"
+    },
+    {
+        "id": "jonleigh",
+        "feedurl": "http://jonleigh.me/rss/",
+        "author": "Jon Leigh",
+        "authoremail": "jon.leigh@gmail.com",
+        "gravatarurl": "https://s.gravatar.com/avatar/99b837597ab08483bf47cffa5a0c13b7.png"
     }
 ]
