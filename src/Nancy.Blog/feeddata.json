@@ -75,5 +75,12 @@
         "author": "Jon Leigh",
         "authoremail": "jon.leigh@gmail.com",
         "gravatarurl": "https://s.gravatar.com/avatar/99b837597ab08483bf47cffa5a0c13b7.png"
+    },
+    {
+        "id": "thefringeninja",
+        "feedurl": "http://the.fringe.ninja/blog/tagged/nancyfx.rss",
+        "author": "João Bragança",
+        "authoremail": "joao.paul@braganca.name",
+        "gravatarurl": "https://secure.gravatar.com/avatar/5625abed31e8e9490d502ab231b667f0?s=128"
     }
 ]
