@@ -77,10 +77,17 @@
         "gravatarurl": "https://s.gravatar.com/avatar/99b837597ab08483bf47cffa5a0c13b7.png"
     },
     {
-        "id": "thefringeninja",
-        "feedurl": "http://the.fringe.ninja/blog/tagged/nancyfx.rss",
-        "author": "João Bragança",
-        "authoremail": "joao.paul@braganca.name",
-        "gravatarurl": "https://secure.gravatar.com/avatar/5625abed31e8e9490d502ab231b667f0?s=128"
+      "id": "thefringeninja",
+      "feedurl": "http://the.fringe.ninja/blog/tagged/nancyfx.rss",
+      "author": "João Bragança",
+      "authoremail": "joao.paul@braganca.name",
+      "gravatarurl": "https://secure.gravatar.com/avatar/5625abed31e8e9490d502ab231b667f0?s=128"
+    },
+    {
+      "id": "tparnell",
+      "feedurl": "https://blog.tommyparnell.com/rss/",
+      "author": "Tommy Parnell",
+      "authoremail": "tparnell8@gmail.com",
+      "gravatarurl": "http://www.gravatar.com/avatar/333e3cea32cd17ff2007d131df336061.png?s=128"
     }
 ]
