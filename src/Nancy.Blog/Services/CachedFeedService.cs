@@ -157,7 +157,7 @@
             {
                 //Unable to load RSS feed
             }
-            }
+        }
 
         public BlogPost GetItem(string link)
         {
