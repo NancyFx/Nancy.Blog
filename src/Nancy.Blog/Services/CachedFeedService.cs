@@ -153,6 +153,10 @@
             {
                 //Unable to load RSS feed
             }
+			catch (XmlException)
+			{
+				//unable to parse rss feed
+			}
         }
 
         public BlogPost GetItem(string link)
