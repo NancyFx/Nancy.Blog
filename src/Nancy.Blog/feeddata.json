@@ -50,9 +50,9 @@
     },
     {
         "id": "jimliddell",
-        "feedurl": "http://liddellj.com/rss",
+        "feedurl": "http://liddellj.com/feed.xml",
         "author": "Jim Liddell",
-        "authoremail": "jim@liddellj.com",
+        "authoremail": "jim@liddell.me",
         "gravatarurl": "https://s.gravatar.com/avatar/98f93d43537cdf3fb5e8b13876633111?s=128"
     },
     {
